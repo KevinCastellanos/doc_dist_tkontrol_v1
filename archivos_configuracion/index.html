@@ -1,0 +1,1639 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../instalaciones/">
+      
+      
+        <link rel="next" href="../comandos/">
+      
+      
+      <link rel="icon" href="../img/logo_orange.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.4">
+    
+    
+      
+        <title>Archivos de configuración - Documentación Apparel Solutions S.A de C.V</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.75 1.75 0 0 1 1 7.775m1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25m13.274 9.537zl-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074M4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5M4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75M8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.5 4.5 0 0 1-.563-1.191 3.84 3.84 0 0 1-.05-2.063 4.65 4.65 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .75.75 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.4 2.4 0 0 1-.507-.441 3.1 3.1 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19.01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.7 3.7 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13M6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.76 2.76 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6 6 0 0 0-.26.16 1 1 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661q.154-.1.313-.195l.007-.004c.1-.061.182-.11.258-.161a1 1 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.61.61 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1 1 0 0 0-.34.398M9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0M9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343za8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746m1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275M6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.75.75 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.75.75 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L6.94 8 4.97 6.03a.75.75 0 0 1 .018-1.042.75.75 0 0 1 1.042-.018"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.25 1.25 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006-.004-.009-.006-.006-.008-.001q-.005 0-.009.004"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.5 3.5 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327q0 .15-.025.292c.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5q-.002.615-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A5 5 0 0 1 8 16a5 5 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5 5 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.7 1.7 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06m.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.17.17 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.75.75 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5m4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5m0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5M2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../styles/styles.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#archivos-de-configuracion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentación Apparel Solutions S.A de C.V" class="md-header__button md-logo" aria-label="Documentación Apparel Solutions S.A de C.V" data-md-component="logo">
+      
+  <img src="../img/logo_orange.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación Apparel Solutions S.A de C.V
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Archivos de configuración
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentación Apparel Solutions S.A de C.V" class="md-nav__button md-logo" aria-label="Documentación Apparel Solutions S.A de C.V" data-md-component="logo">
+      
+  <img src="../img/logo_orange.png" alt="logo">
+
+    </a>
+    Documentación Apparel Solutions S.A de C.V
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Guía
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arquitectura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modelo de diseño de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instalaciones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instalaciones y configuraciones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Archivos de configuración
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Archivos de configuración
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-configuracion-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARCHIVOS DE CONFIGURACIÓN NGINX
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARCHIVOS DE CONFIGURACIÓN NGINX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidor-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor #1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidor-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor #2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-configuracion-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARCHIVOS DE CONFIGURACIÓN MYSQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARCHIVOS DE CONFIGURACIÓN MYSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidor-1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor #1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidor-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor #2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-de-configuracion-vsftpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARCHIVO DE CONFIGURACIÓN VSFTPD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARCHIVO DE CONFIGURACIÓN VSFTPD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidor-1-y-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor 1 y 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comandos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comandos servidores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infraestructura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infraestructura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../base_de_datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lenguaje de modelado UML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algoritmos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Algoritmos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mantenimientos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mantenimientos de servidores
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-configuracion-nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARCHIVOS DE CONFIGURACIÓN NGINX
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARCHIVOS DE CONFIGURACIÓN NGINX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidor-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor #1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidor-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor #2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-configuracion-mysql" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARCHIVOS DE CONFIGURACIÓN MYSQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARCHIVOS DE CONFIGURACIÓN MYSQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidor-1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor #1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servidor-2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor #2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivo-de-configuracion-vsftpd" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARCHIVO DE CONFIGURACIÓN VSFTPD
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ARCHIVO DE CONFIGURACIÓN VSFTPD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servidor-1-y-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servidor 1 y 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="archivos-de-configuracion">ARCHIVOS DE CONFIGURACIÓN</h1>
+<hr />
+<h2 id="archivos-de-configuracion-nginx">ARCHIVOS DE CONFIGURACIÓN NGINX</h2>
+<p>Los archivos de configuración implementado en APS TKONTROL y OPS TKONTROL se detallan a continuación.</p>
+<p><em>Directorio de archivo de configuración de nginx</em></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/nginx/sites-available/default
+</code></pre></div>
+<h3 id="servidor-1">Servidor #1</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># servidor SSL APS.TKONTROL.COM</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Puerto de escucha</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="m">443</span><span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:443<span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Nombre del servidor (nombre de dominio o subdominio)</span>
+<span class="w">    </span>server_name<span class="w"> </span>aps.tkontrol.com<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># SSL</span>
+<span class="w">    </span>ssl_certificate<span class="w"> </span>/etc/letsencrypt/live/aps.tkontrol.com/fullchain.pem<span class="p">;</span>
+<span class="w">    </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/aps.tkontrol.com/privkey.pem<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># security</span>
+<span class="w">    </span>include<span class="w"> </span>nginxconfig.io/security.conf<span class="p">;</span>
+<span class="w">    </span>proxy_set_header<span class="w"> </span>Upgrade<span class="w"> </span><span class="nv">$http_upgrade</span><span class="p">;</span>
+<span class="w">    </span>proxy_set_header<span class="w"> </span>Connection<span class="w"> </span><span class="s2">&quot;upgrade&quot;</span><span class="p">;</span>
+
+<span class="w">    </span>location<span class="w"> </span>~*<span class="w"> </span><span class="se">\.</span><span class="o">(</span>eot<span class="p">|</span>ttf<span class="p">|</span>woff<span class="p">|</span>woff2<span class="o">)</span>$<span class="w"> </span><span class="o">{</span>
+<span class="w">            </span>add_header<span class="w"> </span>Access-Control-Allow-Origin<span class="w"> </span>*<span class="p">;</span><span class="w">   </span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1">## Proyecto angular</span>
+<span class="w">    </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>root<span class="w"> </span>/var/www/html/dist<span class="p">;</span>
+<span class="w">        </span>index<span class="w">  </span>index.html<span class="w"> </span>index.htm<span class="p">;</span>
+<span class="w">        </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri</span>/<span class="w"> </span>/index.html<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># reverse proxy nodejs</span>
+<span class="w">    </span>location<span class="w"> </span>/api<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>proxy_request_buffering<span class="w"> </span>off<span class="p">;</span>
+<span class="w">        </span>proxy_buffering<span class="w"> </span>off<span class="p">;</span>
+<span class="w">        </span>proxy_read_timeout<span class="w"> </span>600s<span class="p">;</span>
+<span class="w">        </span>proxy_connect_timeout<span class="w"> </span>500s<span class="p">;</span>
+<span class="w">        </span>rewrite<span class="w"> </span>/api/<span class="o">(</span>.*<span class="o">)</span><span class="w"> </span>/<span class="nv">$1</span><span class="w">  </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span>proxy_pass<span class="w"> </span>http://127.0.0.1:5000/<span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># reverse proxy nodejs auxilar</span>
+<span class="w">    </span>location<span class="w"> </span>/aux<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>proxy_request_buffering<span class="w"> </span>off<span class="p">;</span>
+<span class="w">        </span>proxy_buffering<span class="w"> </span>off<span class="p">;</span>
+<span class="w">        </span>proxy_read_timeout<span class="w"> </span>600s<span class="p">;</span>
+<span class="w">        </span>proxy_connect_timeout<span class="w"> </span>500s<span class="p">;</span>
+<span class="w">        </span>rewrite<span class="w"> </span>/aux/<span class="o">(</span>.*<span class="o">)</span><span class="w"> </span>/<span class="nv">$1</span><span class="w">  </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span>proxy_pass<span class="w"> </span>http://127.0.0.1:3551/<span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># Socket.io</span>
+<span class="w">    </span>location<span class="w"> </span>/socket.io<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>proxy_pass<span class="w"> </span>http://127.0.0.1:5000/socket.io/<span class="p">;</span>
+<span class="w">        </span>proxy_set_header<span class="w">  </span>X-Real-IP<span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
+<span class="w">        </span>proxy_set_header<span class="w">  </span>X-Real-Port<span class="w"> </span><span class="nv">$remote_port</span><span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># Gateway</span>
+<span class="w">    </span>location<span class="w"> </span>/gateway<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>rewrite<span class="w"> </span>/gateway/<span class="o">(</span>.*<span class="o">)</span><span class="w"> </span>/<span class="nv">$1</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span>proxy_pass<span class="w"> </span>http://127.0.0.1:4913/<span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># additional config</span>
+<span class="w">    </span>include<span class="w"> </span>nginxconfig.io/general.conf<span class="p">;</span>
+
+<span class="w">    </span>location<span class="w"> </span>/srv1<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>proxy_pass<span class="w"> </span>http://127.0.0.1:5000/socket.io/<span class="p">;</span>
+<span class="w">                </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+
+<span class="w">    </span>location<span class="w"> </span>/srv2<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>proxy_pass<span class="w"> </span>http://167.172.122.2:5000/socket.io/<span class="p">;</span>
+<span class="w">                </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1"># subdomains redirect APS.TKONTROL.COM</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Puerto de escucha</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="m">443</span><span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:443<span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Nombre del servidor</span>
+<span class="w">    </span>server_name<span class="w"> </span>aps.tkontrol.com<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># SSL</span>
+<span class="w">    </span>ssl_certificate<span class="w"> </span>/etc/letsencrypt/live/aps.tkontrol.com/fullchain.pem<span class="p">;</span>
+<span class="w">    </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/aps.tkontrol.com/privkey.pem<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># redirecciona a https://aps.tkontrol.com</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://aps.tkontrol.com<span class="nv">$request_uri</span><span class="p">;</span>
+<span class="o">}</span>
+
+<span class="c1"># HTTP redirect</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Puerto de escucha</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="m">80</span><span class="p">;</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:80<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Nombre del servidor</span>
+<span class="w">    </span>server_name<span class="w"> </span>aps.tkontrol.com<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Retorna a https://aps.tkontrol.com</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://aps.tkontrol.com<span class="nv">$request_uri</span><span class="p">;</span>
+<span class="o">}</span>
+
+<span class="c1">#-----------------------------------------------------------------------------------------------</span>
+<span class="c1"># servidor tkontrol.com</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>tkontrol.com<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://<span class="nv">$host$request_uri</span><span class="p">;</span>
+<span class="w">    </span><span class="o">}</span><span class="w"> </span>
+<span class="w">    </span><span class="c1"># managed by Certbot</span>
+
+
+<span class="w">    </span>listen<span class="w"> </span><span class="m">80</span><span class="w"> </span>default_server<span class="p">;</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:80<span class="w"> </span>default_server<span class="p">;</span>
+<span class="w">    </span><span class="c1">#</span>
+<span class="w">    </span>root<span class="w"> </span>/var/www/html/sitio-web-tkontrol<span class="p">;</span>
+<span class="w">    </span><span class="c1"># Add index.php to the list if you are using PHP</span>
+<span class="w">    </span>index<span class="w"> </span>index.html<span class="w"> </span>index.htm<span class="w"> </span>index.php<span class="p">;</span>
+<span class="w">    </span>server_name<span class="w"> </span>tkontrol.com<span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://tkontrol.com<span class="nv">$request_uri</span><span class="p">;</span>
+<span class="o">}</span>
+
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:443<span class="w"> </span>ssl<span class="p">;</span><span class="w"> </span><span class="c1">#ipv6only=on;</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="m">443</span><span class="w"> </span>ssl<span class="p">;</span>
+
+<span class="w">    </span>include<span class="w"> </span>/etc/nginx/snippets/self-signed.conf<span class="p">;</span><span class="w">   </span>
+<span class="w">    </span>include<span class="w"> </span>/etc/letsencrypt/options-ssl-nginx.conf<span class="p">;</span>
+<span class="w">    </span>ssl_dhparam<span class="w"> </span>/etc/letsencrypt/ssl-dhparams.pem<span class="p">;</span><span class="w">  </span>
+
+<span class="w">    </span>root<span class="w"> </span>/var/www/html/sitio-web-tkontrol<span class="p">;</span>
+<span class="w">    </span>index<span class="w"> </span>index.php<span class="p">;</span>
+
+<span class="w">    </span>server_name<span class="w"> </span>tkontrol.com<span class="p">;</span>
+
+<span class="w">    </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="c1">#root</span>
+<span class="w">        </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri</span>/<span class="w"> </span>/index.php?q<span class="o">=</span><span class="nv">$uri</span><span class="p">&amp;</span><span class="nv">$args</span><span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="se">\.</span>php$<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>include<span class="w"> </span>snippets/fastcgi-php.conf<span class="p">;</span>
+<span class="w">        </span>fastcgi_pass<span class="w"> </span>unix:/run/php/php7.4-fpm.sock<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span>ssl_certificate<span class="w"> </span>/etc/letsencrypt/live/tkontrol.com/fullchain.pem<span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="w">    </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/tkontrol.com/privkey.pem<span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="o">}</span>
+<span class="c1"># -----------------------------------------------------------------------------------------------</span>
+<span class="c1"># servidor ops.tkontrol.com</span>
+<span class="c1">#server {</span>
+<span class="c1">#   if ($host = ops.tkontrol.com) {</span>
+<span class="c1">#       return 301 https://$host$request_uri;</span>
+<span class="c1">#   }</span>
+
+<span class="c1">#   listen 80;</span>
+<span class="c1">#   listen [::]:80 ipv6only=on;</span>
+
+<span class="c1">#   root /var/www/html/ops;</span>
+<span class="c1">#   index index.html index.htm index.php;</span>
+<span class="c1">#   server_name ops.tkontrol.com;</span>
+
+<span class="c1">#   return 301 https://ops.tkontrol.com;</span>
+
+
+<span class="c1">#}</span>
+
+<span class="c1">#server {</span>
+<span class="c1">#   listen [::]:443 ssl; #ipv6only=on;</span>
+<span class="c1">#   listen 443 ssl;</span>
+
+<span class="c1">#   include /etc/nginx/snippets/self-signed.conf;</span>
+<span class="c1">#   include /etc/letsencrypt/options-ssl-nginx.conf;</span>
+<span class="c1">#   ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;</span>
+
+<span class="c1">#   root /var/www/html/ops;</span>
+<span class="c1">#   index index.php;</span>
+
+<span class="c1">#   server_name ops.tkontrol.com;</span>
+
+<span class="c1">#   location / {</span>
+<span class="c1">#       try_files $uri $uri/ /index.php?q=$uri$args;</span>
+<span class="c1">#   }</span>
+
+<span class="c1">#   location ~\.php$ {</span>
+<span class="c1">#       include snippets/fastcgi-php.conf;</span>
+<span class="c1">#       fastcgi_pass unix:/run/php/php7.4-fpm.sock;</span>
+<span class="c1">#   }</span>
+<span class="c1">#    ssl_certificate /etc/letsencrypt/live/ops.tkontrol.com/fullchain.pem; # managed by Certbot</span>
+<span class="c1">#    ssl_certificate_key /etc/letsencrypt/live/ops.tkontrol.com/privkey.pem;</span>
+<span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="c1">#}</span>
+<span class="c1"># ---------------------------------------------------------------------------------------------- </span>
+<span class="c1"># ops prueba</span>
+
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="m">80</span><span class="p">;</span>
+
+<span class="w">        </span>root<span class="w"> </span>/var/www/html/mkdocs<span class="p">;</span>
+<span class="w">        </span>index<span class="w"> </span>index.html<span class="w"> </span>index.htm<span class="w"> </span>index.nginx-debian.html<span class="w"> </span>index.php<span class="p">;</span>
+
+<span class="w">       </span>server_name<span class="w"> </span>doc.tkontrol.com<span class="p">;</span>
+
+<span class="w">        </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri</span>/<span class="w"> </span><span class="o">=</span><span class="m">404</span><span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+<h3 id="servidor-2">Servidor #2</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Serverdor SSL OPS.TKONTROL.COM</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Puerto de escucha</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="m">443</span><span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:443<span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Nombre del servidor (nombre de dominio o subdominio)</span>
+<span class="w">    </span>server_name<span class="w"> </span>ops.tkontrol.com<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># SSL</span>
+<span class="w">    </span>ssl_certificate<span class="w"> </span>/etc/letsencrypt/live/ops.tkontrol.com/fullchain.pem<span class="p">;</span>
+<span class="w">    </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/ops.tkontrol.com/privkey.pem<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Security</span>
+<span class="w">    </span><span class="c1">#include nginxconfig.io/security.conf;</span>
+<span class="w">    </span>proxy_set_header<span class="w"> </span>Upgrade<span class="w"> </span><span class="nv">$http_upgrade</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span>proxy_set_header<span class="w"> </span>Connection<span class="w"> </span><span class="s2">&quot;upgrade&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">#add_header Content-Security-Policy   &quot;default-src &#39;self&#39; http: https: data: blob: &#39;unsafe-inline&#39;&quot; always; </span>
+<span class="w">    </span><span class="c1">#add_header Access-Control-Allow-Origin *;</span>
+<span class="w">    </span><span class="c1">#add_header Access-Control-Allow-Origin &quot;origin-list&quot;</span>
+<span class="w">    </span><span class="c1">#add_header &#39;Access-Control-Allow-Origin&#39; &#39;&#39;;</span>
+<span class="w">    </span>add_header<span class="w"> </span>Access-Control-Allow-Origin<span class="w"> </span>*<span class="p">;</span>
+
+<span class="w">    </span>root<span class="w"> </span>/var/www/html/ops<span class="p">;</span>
+<span class="w">    </span>index<span class="w"> </span>index.php<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Proyecto conteo pasajeros</span>
+<span class="w">    </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="c1">#root /var/www/html/ops;</span>
+<span class="w">        </span><span class="c1">#index index.php;</span>
+<span class="w">        </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri</span>/<span class="w"> </span>/index.php?q<span class="o">=</span><span class="nv">$uri$args</span><span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">        </span><span class="c1"># reverse proxy nodejs</span>
+<span class="w">    </span>location<span class="w"> </span>/api<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>proxy_request_buffering<span class="w"> </span>off<span class="p">;</span>
+<span class="w">        </span>proxy_buffering<span class="w"> </span>off<span class="p">;</span>
+<span class="w">        </span>proxy_read_timeout<span class="w"> </span>600s<span class="p">;</span>
+<span class="w">        </span>proxy_connect_timeout<span class="w"> </span>500s<span class="p">;</span>
+<span class="w">        </span>rewrite<span class="w"> </span>/api/<span class="o">(</span>.*<span class="o">)</span><span class="w"> </span>/<span class="nv">$1</span><span class="w">  </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span>proxy_pass<span class="w"> </span>http://127.0.0.1:5000/<span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># Socket.io</span>
+<span class="w">    </span>location<span class="w"> </span>/socket.io<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="c1">#add_header Content-Security-Policy   &quot;default-src &#39;self&#39; http: https: data: blob: &#39;unsafe-inline&#39;&quot; always;</span>
+<span class="w">        </span>proxy_pass<span class="w"> </span>http://127.0.0.1:5000/socket.io/<span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># Gateway</span>
+<span class="w">    </span>location<span class="w"> </span>/gateway<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>rewrite<span class="w"> </span>/gateway/<span class="o">(</span>.*<span class="o">)</span><span class="w"> </span>/<span class="nv">$1</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span>proxy_pass<span class="w"> </span>http://127.0.0.1:4913/<span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># addicional config</span>
+<span class="w">    </span>include<span class="w"> </span>nginxconfig.io/general.conf<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># pass PHP scripts to FastCGI server</span>
+<span class="w">    </span><span class="c1">#</span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="se">\.</span>php$<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>include<span class="w"> </span>snippets/fastcgi-php.conf<span class="p">;</span>
+<span class="w">        </span>fastcgi_pass<span class="w"> </span>unix:/var/run/php/php7.4-fpm.sock<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># deny access to .htaccess files, if Apache&#39;s document root</span>
+<span class="w">    </span><span class="c1"># concurs with nginx one</span>
+<span class="w">    </span><span class="c1">#  </span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span>/<span class="se">\.</span>ht<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>deny<span class="w"> </span>all<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="o">}</span>
+
+<span class="c1"># subdomains redirect OPS.TKONTROL.COM</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Puerto de escucha</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="m">443</span><span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:443<span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Nombre del servidor</span>
+<span class="w">    </span>server_name<span class="w"> </span>ops.tkontrol.com<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># SSL</span>
+<span class="w">    </span>ssl_certificate<span class="w"> </span>/etc/letsencrypt/live/ops.tkontrol.com/fullchain.pem<span class="p">;</span>
+<span class="w">    </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/ops.tkontrol.com/privkey.pem<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># redireccionar a https://ops.tkontrol.com</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://ops.tkontrol.com<span class="nv">$request_uri</span><span class="p">;</span>
+<span class="o">}</span>
+
+<span class="c1"># HTTP redirect</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="c1"># Puerto de escucha</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="m">80</span><span class="p">;</span>
+<span class="w">    </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:80<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Nombre del servidor</span>
+<span class="w">    </span>server_name<span class="w"> </span>ops.tkontrol.com<span class="p">;</span>
+
+<span class="w">    </span><span class="c1"># Retorna a https://ops.tkontrol.com</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://ops.tkontrol.com<span class="nv">$request_uri</span><span class="p">;</span>
+<span class="o">}</span>
+
+<span class="c1"># -------------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># server nominatim.tkontrol.com</span>
+
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>nominatim.tkontrol.com<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://<span class="nv">$host$request_uri</span><span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span><span class="c1"># managed by Certbot</span>
+
+
+<span class="w">        </span>listen<span class="w"> </span><span class="m">80</span><span class="p">;</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:80<span class="w"> </span><span class="nv">ipv6only</span><span class="o">=</span>on<span class="p">;</span>
+<span class="w">        </span><span class="c1">#</span>
+<span class="w">        </span>root<span class="w"> </span>/srv/nominatim/build/website<span class="p">;</span>
+<span class="w">        </span><span class="c1"># Add index.php to the list if you are using PHP</span>
+<span class="w">        </span>index<span class="w"> </span>search.php<span class="w"> </span>index.php<span class="w"> </span>index.html<span class="w"> </span>index.htm<span class="w"> </span>index.php<span class="p">;</span>
+<span class="w">        </span>server_name<span class="w"> </span>nominatim.tkontrol.com<span class="p">;</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://nominatim.tkontrol.com<span class="nv">$request_uri</span><span class="p">;</span>
+<span class="o">}</span>
+
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:443<span class="w"> </span>ssl<span class="p">;</span><span class="w"> </span><span class="c1">#ipv6only=on;</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="m">443</span><span class="w"> </span>ssl<span class="p">;</span>
+
+<span class="w">        </span><span class="c1">#include /etc/nginx/snippets/self-signed.conf;</span>
+<span class="w">        </span>include<span class="w"> </span>/etc/letsencrypt/options-ssl-nginx.conf<span class="p">;</span>
+<span class="w">        </span>ssl_dhparam<span class="w"> </span>/etc/letsencrypt/ssl-dhparams.pem<span class="p">;</span>
+
+<span class="w">        </span>root<span class="w"> </span>/srv/nominatim/build/website<span class="p">;</span>
+<span class="w">        </span>index<span class="w"> </span>search.php<span class="w"> </span>index.php<span class="w"> </span>index.nginx-debian.html<span class="p">;</span>
+
+<span class="w">        </span>server_name<span class="w"> </span>nominatim.tkontrol.com<span class="p">;</span>
+
+<span class="w">        </span><span class="c1">#location / {</span>
+<span class="w">                </span><span class="c1">#root</span>
+<span class="w">        </span><span class="c1">#        try_files $uri $uri/ /index.php?q=$uri&amp;$args;</span>
+<span class="w">        </span><span class="c1">#}</span>
+
+<span class="w">    </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri</span>/<span class="w"> </span>@php<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">        </span>location<span class="w"> </span>~<span class="w"> </span><span class="se">\.</span>php$<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>include<span class="w"> </span>snippets/fastcgi-php.conf<span class="p">;</span>
+<span class="w">                </span>fastcgi_pass<span class="w"> </span>unix:/run/php/php7.4-fpm.sock<span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">    </span>location<span class="w"> </span>@php<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>fastcgi_param<span class="w"> </span>SCRIPT_FILENAME<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$document_root$uri</span><span class="s2">.php&quot;</span><span class="p">;</span>
+<span class="w">        </span>fastcgi_param<span class="w"> </span>PATH_TRANSLATED<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$document_root$uri</span><span class="s2">.php&quot;</span><span class="p">;</span>
+<span class="w">        </span>fastcgi_param<span class="w"> </span>QUERY_STRING<span class="w">    </span><span class="nv">$args</span><span class="p">;</span>
+<span class="w">        </span>fastcgi_pass<span class="w"> </span>unix:/var/run/php/php7.4-fpm.sock<span class="p">;</span>
+<span class="w">        </span>fastcgi_index<span class="w"> </span>index.php<span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>fastcgi_params<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="o">[</span>^/<span class="o">]</span><span class="se">\.</span>php<span class="o">(</span>/<span class="p">|</span>$<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>fastcgi_split_path_info<span class="w"> </span>^<span class="o">(</span>.+?<span class="se">\.</span>php<span class="o">)(</span>/.*<span class="o">)</span>$<span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="o">(</span>!-f<span class="w"> </span><span class="nv">$document_root$fastcgi_script_name</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="m">404</span><span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">        </span>fastcgi_pass<span class="w"> </span>unix:/var/run/php7.4-fpm.sock<span class="p">;</span>
+<span class="w">        </span>fastcgi_index<span class="w"> </span>search.php<span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>fastcgi.conf<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="se">\.</span>css<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>add_header<span class="w">  </span>Content-Type<span class="w">    </span>text/css<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+<span class="w">    </span>location<span class="w"> </span>~<span class="w"> </span><span class="se">\.</span>js<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>add_header<span class="w">  </span>Content-Type<span class="w">    </span>application/x-javascript<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">    </span>ssl_certificate<span class="w"> </span>/etc/letsencrypt/live/nominatim.tkontrol.com/fullchain.pem<span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="w">    </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/nominatim.tkontrol.com/privkey.pem<span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="o">}</span>
+
+<span class="c1"># -------------------------------------------------------------------------------------------------------------------------------------------------</span>
+
+<span class="c1"># servidor SSL SRV2.TKONTROL.COM</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="c1"># Puerto de escucha</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="m">443</span><span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:443<span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+
+<span class="w">        </span><span class="c1"># Nombre del servidor (nombre de dominio o subdominio)</span>
+<span class="w">        </span>server_name<span class="w"> </span>srv2.tkontrol.com<span class="p">;</span>
+
+<span class="w">        </span><span class="c1"># SSL</span>
+<span class="w">    </span>ssl_certificate<span class="w"> </span>/etc/letsencrypt/live/srv2.tkontrol.com/fullchain.pem<span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="w">    </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/srv2.tkontrol.com/privkey.pem<span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+
+<span class="w">        </span><span class="c1"># security</span>
+<span class="w">        </span>include<span class="w"> </span>nginxconfig.io/security.conf<span class="p">;</span>
+<span class="w">        </span>proxy_set_header<span class="w"> </span>Upgrade<span class="w"> </span><span class="nv">$http_upgrade</span><span class="p">;</span>
+<span class="w">        </span>proxy_set_header<span class="w"> </span>Connection<span class="w"> </span><span class="s2">&quot;upgrade&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="c1">#add_header Content-Security-Policy   &quot;default-src &#39;self&#39; http: https: data: blob: &#39;unsafe-inline&#39;&quot; always;</span>
+<span class="w">    </span><span class="c1">#add_header Content-Security-Policy &quot;connect-src &#39;self&#39; wss://srv2.tkontrol.com https://srv2.tkontrol.com;&quot; always;</span>
+<span class="w">        </span><span class="c1"># Proyecto default nginx</span>
+<span class="w">        </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>root<span class="w"> </span>/var/www/html<span class="p">;</span>
+<span class="w">                </span>index<span class="w">  </span>index.html<span class="w"> </span>index.htm<span class="w"> </span>index.nginx-debian.html<span class="p">;</span>
+<span class="w">                </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri</span>/<span class="w"> </span>/index.html<span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+
+<span class="w">        </span><span class="c1"># reverse proxy nodejs</span>
+<span class="w">        </span>location<span class="w"> </span>/api<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>proxy_request_buffering<span class="w"> </span>off<span class="p">;</span>
+<span class="w">                </span>proxy_buffering<span class="w"> </span>off<span class="p">;</span>
+<span class="w">                </span>proxy_read_timeout<span class="w"> </span>600s<span class="p">;</span>
+<span class="w">                </span>proxy_connect_timeout<span class="w"> </span>500s<span class="p">;</span>
+<span class="w">                </span>rewrite<span class="w"> </span>/api/<span class="o">(</span>.*<span class="o">)</span><span class="w"> </span>/<span class="nv">$1</span><span class="w">  </span><span class="k">break</span><span class="p">;</span>
+<span class="w">                </span>proxy_pass<span class="w"> </span>http://127.0.0.1:5000/<span class="p">;</span>
+<span class="w">                </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+
+<span class="w">        </span><span class="c1"># reverse proxy nodejs auxilar</span>
+<span class="w">    </span>location<span class="w"> </span>/aux<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>proxy_request_buffering<span class="w"> </span>off<span class="p">;</span>
+<span class="w">        </span>proxy_buffering<span class="w"> </span>off<span class="p">;</span>
+<span class="w">        </span>proxy_read_timeout<span class="w"> </span>600s<span class="p">;</span>
+<span class="w">        </span>proxy_connect_timeout<span class="w"> </span>500s<span class="p">;</span>
+<span class="w">        </span>rewrite<span class="w"> </span>/aux/<span class="o">(</span>.*<span class="o">)</span><span class="w"> </span>/<span class="nv">$1</span><span class="w">  </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span>proxy_pass<span class="w"> </span>http://127.0.0.1:3551/<span class="p">;</span>
+<span class="w">        </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">    </span><span class="o">}</span>
+
+<span class="w">        </span><span class="c1"># Socket.io</span>
+<span class="w">        </span>location<span class="w"> </span>/socket.io<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>proxy_pass<span class="w"> </span>http://127.0.0.1:5000/socket.io/<span class="p">;</span>
+<span class="w">                </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+
+<span class="w">        </span><span class="c1"># Gateway</span>
+<span class="w">        </span>location<span class="w"> </span>/gateway<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>rewrite<span class="w"> </span>/gateway/<span class="o">(</span>.*<span class="o">)</span><span class="w"> </span>/<span class="nv">$1</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">                </span>proxy_pass<span class="w"> </span>http://127.0.0.1:4913/<span class="p">;</span>
+<span class="w">                </span>include<span class="w"> </span>nginxconfig.io/proxy.conf<span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+
+<span class="w">        </span><span class="c1"># additional config</span>
+<span class="w">        </span>include<span class="w"> </span>nginxconfig.io/general.conf<span class="p">;</span>
+
+<span class="o">}</span>
+
+<span class="c1"># subdomains redirect SRV2.TKONTROL.COM</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="c1"># Puerto de escucha</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="m">443</span><span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:443<span class="w"> </span>ssl<span class="w"> </span>http2<span class="p">;</span>
+
+<span class="w">        </span><span class="c1"># Nombre del servidor</span>
+<span class="w">        </span>server_name<span class="w"> </span>srv2.tkontrol.com<span class="p">;</span>
+
+<span class="w">        </span><span class="c1"># SSL</span>
+<span class="w">        </span>ssl_certificate<span class="w"> </span>/etc/letsencrypt/live/srv2.tkontrol.com/fullchain.pem<span class="p">;</span>
+<span class="w">        </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/srv2.tkontrol.com/privkey.pem<span class="p">;</span>
+
+<span class="w">        </span><span class="c1"># redireccionar a https://srv2.tkontrol.com</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://srv2.tkontrol.com<span class="nv">$request_uri</span><span class="p">;</span>
+
+<span class="w">    </span>ssl_certificate<span class="w"> </span>/etc/letsencrypt/live/srv2.tkontrol.com/fullchain.pem<span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="w">    </span>ssl_certificate_key<span class="w"> </span>/etc/letsencrypt/live/srv2.tkontrol.com/privkey.pem<span class="p">;</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+<span class="o">}</span>
+
+<span class="c1"># HTTP redirect</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="nv">$host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>srv2.tkontrol.com<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://<span class="nv">$host$request_uri</span><span class="p">;</span>
+<span class="w">    </span><span class="o">}</span><span class="w"> </span><span class="c1"># managed by Certbot</span>
+
+
+<span class="w">        </span><span class="c1"># Puerto de escucha</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="m">80</span><span class="p">;</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="o">[</span>::<span class="o">]</span>:80<span class="p">;</span>
+
+<span class="w">        </span><span class="c1"># Nombre del servidor</span>
+<span class="w">        </span>server_name<span class="w"> </span>srv2.tkontrol.com<span class="p">;</span>
+
+<span class="w">        </span><span class="c1"># Retorna a https://srv2.tkontrol.com</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="m">301</span><span class="w"> </span>https://srv2.tkontrol.com<span class="nv">$request_uri</span><span class="p">;</span>
+<span class="o">}</span>
+
+<span class="c1"># --------------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="c1"># server de prueba</span>
+server<span class="w"> </span><span class="o">{</span>
+<span class="w">        </span>listen<span class="w"> </span><span class="m">80</span><span class="p">;</span>
+
+<span class="w">        </span>root<span class="w"> </span>/var/www/html/webservices_soap<span class="p">;</span>
+<span class="w">        </span>index<span class="w"> </span>index.php<span class="w"> </span>index.htm<span class="w"> </span>index.nginx-debian.html<span class="p">;</span>
+
+<span class="w">       </span>server_name<span class="w"> </span>aux.tkontrol.com<span class="p">;</span>
+
+<span class="w">        </span>location<span class="w"> </span>/<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>try_files<span class="w"> </span><span class="nv">$uri</span><span class="w"> </span><span class="nv">$uri</span>/<span class="w"> </span><span class="o">=</span><span class="m">404</span><span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+
+<span class="w">    </span><span class="c1"># pass PHP scripts to FastCGI server</span>
+<span class="w">        </span><span class="c1">#</span>
+<span class="w">        </span>location<span class="w"> </span>~<span class="w"> </span><span class="se">\.</span>php$<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>include<span class="w"> </span>snippets/fastcgi-php.conf<span class="p">;</span>
+<span class="w">        </span>fastcgi_pass<span class="w"> </span>unix:/run/php/php7.4-fpm.sock<span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+
+<span class="w">        </span><span class="c1"># deny access to .htaccess files, if Apache&#39;s document root</span>
+<span class="w">        </span><span class="c1"># concurs with nginx&#39;s one</span>
+<span class="w">        </span><span class="c1">#</span>
+<span class="w">        </span>location<span class="w"> </span>~<span class="w"> </span>/<span class="se">\.</span>ht<span class="w"> </span><span class="o">{</span>
+<span class="w">                </span>deny<span class="w"> </span>all<span class="p">;</span>
+<span class="w">        </span><span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre></div>
+<h2 id="archivos-de-configuracion-mysql">ARCHIVOS DE CONFIGURACIÓN MYSQL</h2>
+<p>El Archivo de configuración del servidor de MySQL implementado en APS TKONTROL está detallado a continuación.</p>
+<p><em>Directorio de archivo de configuración de MySQL</em></p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/mysql/mysql.conf.d/mysqld.cnf
+</code></pre></div>
+<h3 id="servidor-1_1">Servidor #1</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">#</span>
+<span class="c1"># The MySQL database server configuration file.</span>
+<span class="c1">#</span>
+<span class="c1"># You can copy this to one of:</span>
+<span class="c1"># - &quot;/etc/mysql/my.cnf&quot; to set global options,</span>
+<span class="c1"># - &quot;~/.my.cnf&quot; to set user-specific options.</span>
+<span class="c1"># </span>
+<span class="c1"># One can use all long options that the program supports.</span>
+<span class="c1"># Run program with --help to get a list of available options and with</span>
+<span class="c1"># --print-defaults to see which it would actually understand and use.</span>
+<span class="c1">#</span>
+<span class="c1"># For explanations see</span>
+<span class="c1"># http://dev.mysql.com/doc/mysql/en/server-system-variables.html</span>
+
+<span class="c1"># This will be passed to all mysql clients</span>
+<span class="c1"># It has been reported that passwords should be enclosed with ticks/quotes</span>
+<span class="c1"># escpecially if they contain &quot;#&quot; chars...</span>
+<span class="c1"># Remember to edit /etc/mysql/debian.cnf when changing the socket location.</span>
+
+<span class="c1"># Here is entries for some specific programs</span>
+<span class="c1"># The following values assume you have at least 32M ram</span>
+
+<span class="o">[</span>mysqld_safe<span class="o">]</span>
+<span class="nv">socket</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>/var/run/mysqld/mysqld.sock
+<span class="nv">nice</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+
+<span class="o">[</span>mysqld<span class="o">]</span>
+<span class="c1">#</span>
+<span class="c1"># * Basic Settings</span>
+<span class="c1">#</span>
+<span class="nv">user</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>mysql
+pid-file<span class="w">    </span><span class="o">=</span><span class="w"> </span>/var/run/mysqld/mysqld.pid
+<span class="nv">socket</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>/var/run/mysqld/mysqld.sock
+<span class="nv">port</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="m">3306</span>
+<span class="nv">basedir</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>/usr
+<span class="nv">datadir</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>/var/lib/mysql
+<span class="nv">tmpdir</span><span class="w">      </span><span class="o">=</span><span class="w"> </span>/tmp
+lc-messages-dir<span class="w"> </span><span class="o">=</span><span class="w"> </span>/usr/share/mysql
+<span class="c1">#skip-external-locking</span>
+<span class="c1">#</span>
+<span class="c1"># Instead of skip-networking the default is now to listen only on</span>
+<span class="c1"># localhost which is more compatible and is not less secure.</span>
+bind-address<span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.0.0.0
+<span class="c1">#</span>
+<span class="c1"># * Fine Tuning</span>
+<span class="c1">#</span>
+<span class="nv">key_buffer_size</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>16M
+<span class="nv">max_allowed_packet</span><span class="w">  </span><span class="o">=</span><span class="w"> </span>16M
+<span class="nv">thread_stack</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>192K
+<span class="nv">thread_cache_size</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="m">8</span>
+<span class="c1"># This replaces the startup script and checks MyISAM tables if needed</span>
+<span class="c1"># the first time they are touched</span>
+myisam-recover-options<span class="w">  </span><span class="o">=</span><span class="w"> </span>BACKUP
+<span class="c1">#max_connections        = 100</span>
+<span class="c1">#table_open_cache       = 64</span>
+<span class="c1">#thread_concurrency     = 10</span>
+<span class="c1">#</span>
+<span class="c1"># * Query Cache Configuration</span>
+<span class="c1">#</span>
+<span class="nv">query_cache_limit</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>1M
+<span class="nv">query_cache_size</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>16M
+<span class="c1">#</span>
+<span class="c1"># * Logging and Replication</span>
+<span class="c1">#</span>
+<span class="c1"># Both location gets rotated by the cronjob.</span>
+<span class="c1"># Be aware that this log type is a performance killer.</span>
+<span class="c1"># As of 5.1 you can enable the log at runtime!</span>
+<span class="c1">#general_log_file        = /var/log/mysql/mysql.log</span>
+<span class="c1">#general_log             = 1</span>
+<span class="c1">#</span>
+<span class="c1"># Error log - should be very few entries.</span>
+<span class="c1">#</span>
+<span class="nv">log_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/var/log/mysql/error.log
+<span class="c1">#</span>
+<span class="c1"># Here you can see queries with especially long duration</span>
+<span class="c1">#slow_query_log     = 1</span>
+<span class="c1">#slow_query_log_file    = /var/log/mysql/mysql-slow.log</span>
+<span class="c1">#long_query_time = 2</span>
+<span class="c1">#log-queries-not-using-indexes</span>
+<span class="c1">#</span>
+<span class="c1"># The following can be used as easy to replay backup logs or for replication.</span>
+<span class="c1"># note: if you are setting up a replication slave, see README.Debian about</span>
+<span class="c1">#       other settings you may need to change.</span>
+<span class="c1">#server-id      = 1</span>
+<span class="c1">#log_bin            = /var/log/mysql/mysql-bin.log</span>
+<span class="nv">expire_logs_days</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="m">10</span>
+<span class="nv">max_binlog_size</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>100M
+<span class="c1">#binlog_do_db       = include_database_name</span>
+<span class="c1">#binlog_ignore_db   = include_database_name</span>
+<span class="c1">#</span>
+<span class="c1"># * InnoDB</span>
+<span class="c1">#</span>
+<span class="c1"># InnoDB is enabled by default with a 10MB datafile in /var/lib/mysql/.</span>
+<span class="c1"># Read the manual for more InnoDB related options. There are many!</span>
+<span class="c1">#</span>
+<span class="c1"># * Security Features</span>
+<span class="c1">#</span>
+<span class="c1"># Read the manual, too, if you want chroot!</span>
+<span class="c1"># chroot = /var/lib/mysql/</span>
+<span class="c1">#</span>
+<span class="c1"># For generating SSL certificates I recommend the OpenSSL GUI &quot;tinyca&quot;.</span>
+<span class="c1">#</span>
+<span class="c1"># ssl-ca=/etc/mysql/cacert.pem</span>
+<span class="c1"># ssl-cert=/etc/mysql/server-cert.pem</span>
+<span class="c1"># ssl-key=/etc/mysql/server-key.pem</span>
+</code></pre></div>
+<h3 id="servidor-2_1">Servidor #2</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">#</span>
+<span class="c1"># The MySQL database server configuration file.</span>
+<span class="c1">#</span>
+<span class="c1"># One can use all long options that the program supports.</span>
+<span class="c1"># Run program with --help to get a list of available options and with</span>
+<span class="c1"># --print-defaults to see which it would actually understand and use.</span>
+<span class="c1">#</span>
+<span class="c1"># For explanations see</span>
+<span class="c1"># http://dev.mysql.com/doc/mysql/en/server-system-variables.html</span>
+
+<span class="c1"># Here is entries for some specific programs</span>
+<span class="c1"># The following values assume you have at least 32M ram</span>
+
+<span class="o">[</span>mysqld<span class="o">]</span>
+<span class="c1">#</span>
+<span class="c1"># * Basic Settings</span>
+<span class="c1">#</span>
+<span class="nv">user</span><span class="w">        </span><span class="o">=</span><span class="w"> </span>mysql
+<span class="c1"># pid-file  = /var/run/mysqld/mysqld.pid</span>
+<span class="c1"># socket    = /var/run/mysqld/mysqld.sock</span>
+<span class="c1"># port      = 3306</span>
+<span class="c1"># datadir   = /var/lib/mysql</span>
+
+
+<span class="c1"># If MySQL is running as a replication slave, this should be</span>
+<span class="c1"># changed. Ref https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_tmpdir</span>
+<span class="c1"># tmpdir        = /tmp</span>
+<span class="c1">#</span>
+<span class="c1"># Instead of skip-networking the default is now to listen only on</span>
+<span class="c1"># localhost which is more compatible and is not less secure.</span>
+bind-address<span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.0.0.0
+<span class="c1">#</span>
+<span class="c1"># * Fine Tuning</span>
+<span class="c1">#</span>
+<span class="nv">key_buffer_size</span><span class="w">     </span><span class="o">=</span><span class="w"> </span>16M
+<span class="c1"># max_allowed_packet    = 64M</span>
+<span class="c1"># thread_stack      = 256K</span>
+
+<span class="c1"># thread_cache_size       = -1</span>
+
+<span class="c1"># This replaces the startup script and checks MyISAM tables if needed</span>
+<span class="c1"># the first time they are touched</span>
+myisam-recover-options<span class="w">  </span><span class="o">=</span><span class="w"> </span>BACKUP
+
+<span class="c1"># max_connections        = 151</span>
+
+<span class="c1"># table_open_cache       = 4000</span>
+
+<span class="c1">#</span>
+<span class="c1"># * Logging and Replication</span>
+<span class="c1">#</span>
+<span class="c1"># Both location gets rotated by the cronjob.</span>
+<span class="c1">#</span>
+<span class="c1"># Log all queries</span>
+<span class="c1"># Be aware that this log type is a performance killer.</span>
+<span class="c1"># general_log_file        = /var/log/mysql/query.log</span>
+<span class="c1"># general_log             = 1</span>
+<span class="c1">#</span>
+<span class="c1"># Error log - should be very few entries.</span>
+<span class="c1">#</span>
+<span class="nv">log_error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>/var/log/mysql/error.log
+<span class="c1">#</span>
+<span class="c1"># Here you can see queries with especially long duration</span>
+<span class="c1"># slow_query_log        = 1</span>
+<span class="c1"># slow_query_log_file   = /var/log/mysql/mysql-slow.log</span>
+<span class="c1"># long_query_time = 2</span>
+<span class="c1"># log-queries-not-using-indexes</span>
+<span class="c1">#</span>
+<span class="c1"># The following can be used as easy to replay backup logs or for replication.</span>
+<span class="c1"># note: if you are setting up a replication slave, see README.Debian about</span>
+<span class="c1">#       other settings you may need to change.</span>
+<span class="c1"># server-id     = 1</span>
+<span class="c1"># log_bin           = /var/log/mysql/mysql-bin.log</span>
+<span class="c1"># binlog_expire_logs_seconds    = 2592000</span>
+<span class="nv">max_binlog_size</span><span class="w">   </span><span class="o">=</span><span class="w"> </span>100M
+<span class="c1"># binlog_do_db      = include_database_name</span>
+<span class="c1"># binlog_ignore_db  = include_database_name</span>
+</code></pre></div>
+<h2 id="archivo-de-configuracion-vsftpd">ARCHIVO DE CONFIGURACIÓN VSFTPD</h2>
+<p><em>Directorio de archivo de configuración de vsftpd</em>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/vsftpd.conf
+</code></pre></div></p>
+<h3 id="servidor-1-y-2">Servidor 1 y 2</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example config file /etc/vsftpd.conf</span>
+<span class="c1">#</span>
+<span class="c1"># The default compiled in settings are fairly paranoid. This sample file</span>
+<span class="c1"># loosens things up a bit, to make the ftp daemon more usable.</span>
+<span class="c1"># Please see vsftpd.conf.5 for all compiled in defaults.</span>
+<span class="c1">#</span>
+<span class="c1"># READ THIS: This example file is NOT an exhaustive list of vsftpd options.</span>
+<span class="c1"># Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd&#39;s</span>
+<span class="c1"># capabilities.</span>
+<span class="c1">#</span>
+<span class="c1">#</span>
+<span class="c1"># Run standalone?  vsftpd can run either from an inetd or as a standalone</span>
+<span class="c1"># daemon started from an initscript.</span>
+<span class="nv">listen</span><span class="o">=</span>NO
+<span class="c1">#</span>
+<span class="c1"># This directive enables listening on IPv6 sockets. By default, listening</span>
+<span class="c1"># on the IPv6 &quot;any&quot; address (::) will accept connections from both IPv6</span>
+<span class="c1"># and IPv4 clients. It is not necessary to listen on *both* IPv4 and IPv6</span>
+<span class="c1"># sockets. If you want that (perhaps because you want to listen on specific</span>
+<span class="c1"># addresses) then you must run two copies of vsftpd with two configuration</span>
+<span class="c1"># files.</span>
+<span class="nv">listen_ipv6</span><span class="o">=</span>YES
+<span class="c1">#</span>
+<span class="c1"># Allow anonymous FTP? (Disabled by default).</span>
+<span class="nv">anonymous_enable</span><span class="o">=</span>NO
+<span class="c1">#</span>
+<span class="c1"># Uncomment this to allow local users to log in.</span>
+<span class="nv">local_enable</span><span class="o">=</span>YES
+<span class="c1">#</span>
+<span class="c1"># Uncomment this to enable any form of FTP write command.</span>
+<span class="nv">write_enable</span><span class="o">=</span>YES
+<span class="c1">#</span>
+<span class="c1"># Default umask for local users is 077. You may wish to change this to 022,</span>
+<span class="c1"># if your users expect that (022 is used by most other ftpd&#39;s)</span>
+<span class="nv">local_umask</span><span class="o">=</span><span class="m">022</span>
+<span class="c1">#</span>
+<span class="c1"># Uncomment this to allow the anonymous FTP user to upload files. This only</span>
+<span class="c1"># has an effect if the above global write enable is activated. Also, you will</span>
+<span class="c1"># obviously need to create a directory writable by the FTP user.</span>
+<span class="c1">#anon_upload_enable=YES</span>
+<span class="c1">#</span>
+<span class="c1"># Uncomment this if you want the anonymous FTP user to be able to create</span>
+<span class="c1"># new directories.</span>
+<span class="c1">#anon_mkdir_write_enable=YES</span>
+<span class="c1">#</span>
+<span class="c1"># Activate directory messages - messages given to remote users when they</span>
+<span class="c1"># go into a certain directory.</span>
+<span class="nv">dirmessage_enable</span><span class="o">=</span>YES
+<span class="c1">#</span>
+<span class="c1"># If enabled, vsftpd will display directory listings with the time</span>
+<span class="c1"># in  your  local  time  zone.  The default is to display GMT. The</span>
+<span class="c1"># times returned by the MDTM FTP command are also affected by this</span>
+<span class="c1"># option.</span>
+<span class="nv">use_localtime</span><span class="o">=</span>YES
+<span class="c1">#</span>
+<span class="c1"># Activate logging of uploads/downloads.</span>
+<span class="nv">xferlog_enable</span><span class="o">=</span>YES
+<span class="c1">#</span>
+<span class="c1"># Make sure PORT transfer connections originate from port 20 (ftp-data).</span>
+<span class="nv">connect_from_port_20</span><span class="o">=</span>YES
+<span class="c1">#</span>
+<span class="c1"># If you want, you can arrange for uploaded anonymous files to be owned by</span>
+<span class="c1"># a different user. Note! Using &quot;root&quot; for uploaded files is not</span>
+<span class="c1"># recommended!</span>
+<span class="c1">#chown_uploads=YES</span>
+<span class="c1">#chown_username=whoever</span>
+<span class="c1">#</span>
+<span class="c1"># You may override where the log file goes if you like. The default is shown</span>
+<span class="c1"># below.</span>
+<span class="nv">xferlog_file</span><span class="o">=</span>/var/log/vsftpd.log
+<span class="c1">#</span>
+<span class="c1"># If you want, you can have your log file in standard ftpd xferlog format.</span>
+<span class="c1"># Note that the default log file location is /var/log/xferlog in this case.</span>
+<span class="nv">xferlog_std_format</span><span class="o">=</span>YES
+<span class="c1">#</span>
+<span class="c1"># You may change the default value for timing out an idle session.</span>
+<span class="nv">idle_session_timeout</span><span class="o">=</span><span class="m">100</span>
+<span class="c1">#</span>
+<span class="c1"># You may change the default value for timing out a data connection.</span>
+<span class="nv">data_connection_timeout</span><span class="o">=</span><span class="m">100</span>
+<span class="c1">#Especifica el máximo número de clientes que tienen permitido conectarse desde la misma dirección IP fuente.</span>
+<span class="c1">#El valor predeterminado es 0, lo que no limita las conexiones.</span>
+<span class="nv">max_per_ip</span><span class="o">=</span><span class="m">3</span>
+<span class="c1"># It is recommended that you define on your system a unique user which the</span>
+<span class="c1"># ftp server can use as a totally isolated and unprivileged user.</span>
+<span class="c1">#nopriv_user=ftpsecure</span>
+<span class="c1">#</span>
+<span class="c1"># Enable this and the server will recognise asynchronous ABOR requests. Not</span>
+<span class="c1"># recommended for security (the code is non-trivial). Not enabling it,</span>
+<span class="c1"># however, may confuse older FTP clients.</span>
+<span class="c1">#async_abor_enable=YES</span>
+<span class="c1">#</span>
+<span class="c1"># By default the server will pretend to allow ASCII mode but in fact ignore</span>
+<span class="c1"># the request. Turn on the below options to have the server actually do ASCII</span>
+<span class="c1"># mangling on files when in ASCII mode.</span>
+<span class="c1"># Beware that on some FTP servers, ASCII support allows a denial of service</span>
+<span class="c1"># attack (DoS) via the command &quot;SIZE /big/file&quot; in ASCII mode. vsftpd</span>
+<span class="c1"># predicted this attack and has always been safe, reporting the size of the</span>
+<span class="c1"># raw file.</span>
+<span class="c1"># ASCII mangling is a horrible feature of the protocol.</span>
+<span class="nv">ascii_upload_enable</span><span class="o">=</span>YES
+<span class="c1">#ascii_download_enable=YES</span>
+<span class="c1">#</span>
+<span class="c1"># You may fully customise the login banner string:</span>
+<span class="nv">ftpd_banner</span><span class="o">=</span>Welcome<span class="w"> </span>to<span class="w"> </span>OPS<span class="w"> </span>TKONTROL<span class="w"> </span>FTP<span class="w"> </span>service.
+<span class="c1">#</span>
+<span class="c1"># You may specify a file of disallowed anonymous e-mail addresses. Apparently</span>
+<span class="c1"># useful for combatting certain DoS attacks.</span>
+<span class="c1">#deny_email_enable=YES</span>
+<span class="c1"># (default follows)</span>
+<span class="c1">#banned_email_file=/etc/vsftpd.banned_emails</span>
+<span class="c1">#</span>
+<span class="c1"># You may restrict local users to their home directories.  See the FAQ for</span>
+<span class="c1"># the possible risks in this before using chroot_local_user or</span>
+<span class="c1"># chroot_list_enable below.</span>
+<span class="nv">chroot_local_user</span><span class="o">=</span>YES
+<span class="c1">#</span>
+<span class="c1"># You may specify an explicit list of local users to chroot() to their home</span>
+<span class="c1"># directory. If chroot_local_user is YES, then this list becomes a list of</span>
+<span class="c1"># users to NOT chroot().</span>
+<span class="c1"># (Warning! chroot&#39;ing can be very dangerous. If using chroot, make sure that</span>
+<span class="c1"># the user does not have write access to the top level directory within the</span>
+<span class="c1"># chroot)</span>
+<span class="c1">#chroot_local_user=YES</span>
+<span class="c1">#chroot_list_enable=YES</span>
+<span class="c1"># (default follows)</span>
+<span class="c1">#chroot_list_file=/etc/vsftpd.chroot_list</span>
+<span class="c1">#</span>
+<span class="c1"># You may activate the &quot;-R&quot; option to the builtin ls. This is disabled by</span>
+<span class="c1"># default to avoid remote users being able to cause excessive I/O on large</span>
+<span class="c1"># sites. However, some broken FTP clients such as &quot;ncftp&quot; and &quot;mirror&quot; assume</span>
+<span class="c1"># the presence of the &quot;-R&quot; option, so there is a strong case for enabling it.</span>
+<span class="c1">#ls_recurse_enable=YES</span>
+<span class="c1">#</span>
+<span class="c1"># Customization</span>
+<span class="c1">#</span>
+<span class="c1"># Some of vsftpd&#39;s settings don&#39;t fit the filesystem layout by</span>
+<span class="c1"># default.</span>
+<span class="c1">#</span>
+<span class="c1"># This option should be the name of a directory which is empty.  Also, the</span>
+<span class="c1"># directory should not be writable by the ftp user. This directory is used</span>
+<span class="c1"># as a secure chroot() jail at times vsftpd does not require filesystem</span>
+<span class="c1"># access.</span>
+<span class="nv">secure_chroot_dir</span><span class="o">=</span>/var/run/vsftpd/empty
+<span class="c1">#</span>
+<span class="c1"># This string is the name of the PAM service vsftpd will use.</span>
+<span class="nv">pam_service_name</span><span class="o">=</span>vsftpd
+<span class="c1">#</span>
+<span class="c1"># This option specifies the location of the RSA certificate to use for SSL</span>
+<span class="c1"># encrypted connections.</span>
+<span class="nv">rsa_cert_file</span><span class="o">=</span>/etc/ssl/certs/ssl-cert-snakeoil.pem
+<span class="nv">rsa_private_key_file</span><span class="o">=</span>/etc/ssl/private/ssl-cert-snakeoil.key
+<span class="nv">ssl_enable</span><span class="o">=</span>NO
+
+<span class="c1">#</span>
+<span class="c1"># Uncomment this to indicate that vsftpd use a utf8 filesystem.</span>
+<span class="c1">#utf8_filesystem=YES</span>
+<span class="nv">userlist_enable</span><span class="o">=</span>YES
+<span class="nv">tcp_wrappers</span><span class="o">=</span>YES
+<span class="nv">allow_writeable_chroot</span><span class="o">=</span>YES
+<span class="nv">userlist_file</span><span class="o">=</span>/etc/vsftpd.userlist
+<span class="nv">userlist_deny</span><span class="o">=</span>NO
+<span class="nv">pasv_enable</span><span class="o">=</span>YES
+<span class="nv">pasv_min_port</span><span class="o">=</span><span class="m">40000</span>
+<span class="nv">pasv_max_port</span><span class="o">=</span><span class="m">50000</span>
+<span class="nv">seccomp_sandbox</span><span class="o">=</span>NO
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
